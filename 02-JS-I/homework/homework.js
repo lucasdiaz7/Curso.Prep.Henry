@@ -147,19 +147,21 @@ function numeroRandom() {
   return Math.random (0, 1)
 }
 
-function esPositivo(numero) {
-  //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
-  //Si el número es positivo, devolver ---> "Es positivo"
-  //Si el número es negativo, devolver ---> "Es negativo"
-  //Si el número es 0, devuelve false
-  if (num > 0) 
-  { return "es positivo"}
-  else if (num < 0)
-   { return "es negativo" }
-  else  (num === 0)
-  {return false}
-}
+function esPositivo(numero){ 
+//La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
+//Si el número es positivo, devolver ---> "Es positivo"
+//Si el número es negativo, devolver ---> "Es negativo"
+//Si el número es 0, devuelve false
 
+if(numero === 0) { 
+  return false;
+}
+else if(numero > 0) {
+  return "Es positivo";
+}
+else 
+  { return "Es negativo";  }
+}
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
@@ -179,7 +181,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return 'hola' , nombre ,'!'
+  return 'Hola ' + nombre + '!';
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -192,7 +194,7 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
- return * 4
+ return lado * 4
 }
 
 
@@ -207,7 +209,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  return euro * 1,20;
+  return euro * 1.2
 }
 
 
@@ -264,4 +266,5 @@ module.exports = {
   areaDelTriangulo,
   deEuroAdolar,
   esVocal,
-};
+ };
+   
